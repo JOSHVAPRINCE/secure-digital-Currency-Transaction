@@ -1,0 +1,33 @@
+<form  action="/user_withdraw" method="post" enctype="multipart/form-data" name="form1" id="form1">
+<div class="title-content text-center">
+          
+          <h3 align="center" class="title-w3l mb-sm-3 text-center">Withdraw</h3>
+  </div>
+  <table height="127" align="center">
+    <tr>
+      <td>Bank</td>
+      <td><div align="left">
+        
+        <select name="bank">
+		 {% for row in items %}  
+          <option value="{{ row[0] }}">{{ row[0] }}</option>
+		   {% endfor %}  
+        </select>
+      
+      </div></td>
+    </tr>
+    <tr>
+      <td><div align="left">Amount</div></td>
+      <td><div align="left">
+        <input name="amount" type="number" id="amount"   required="" />
+      </div></td>
+    </tr>
+    <tr>
+      <td><div align="left"></div></td>
+      <td><div align="left"><span class="tp">
+        <input type="submit" name="btn" value="Submit" />
+      </span></div></td>
+    </tr>
+  </table>
+</form>
+ 

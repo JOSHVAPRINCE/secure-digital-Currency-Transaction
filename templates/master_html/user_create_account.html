@@ -1,0 +1,50 @@
+<form  action="/user_create_account" method="post" enctype="multipart/form-data" name="form1" id="form1">
+<div class="title-content text-center">
+          
+          <h3 align="center" class="title-w3l mb-sm-3 text-center">Create Account </h3>
+  </div>
+  <table height="127" align="center">
+    <tr>
+      <td>Bank</td>
+      <td><div align="left">
+        
+        <select name="select">
+		 {% for row in items %}  
+          <option value="{{ row[0] }}">{{ row[0] }}</option>
+		   {% endfor %}  
+        </select>
+      
+      </div></td>
+    </tr>
+    <tr>
+      <td><div align="left">Username</div></td>
+      <td><div align="left">
+        <input name="username" type="text" id="username" value={{ username }}  required=""  readonly=""/>
+      </div></td>
+    </tr>
+    <tr>
+      <td><div align="left">Aadhar No </div></td>
+      <td><div align="left">
+        <input name="aadhar_no" type="text" id="aadhar_no" value={{ aadhar_number }}  required=""   readonly=""/>
+      </div></td>
+    </tr>
+    <tr>
+      <td><div align="left">PAN No </div></td>
+      <td> 
+        <div align="left">
+          <input name="pan_no" type="text" id="pan_no"  value={{ pan_number }}  required=""  readonly="" />
+        </div></td>
+    </tr>
+    <tr>
+      <td>Opening Balance </td>
+      <td><input name="opening_balance" type="text" id="opening_balance" value={{ opening_balance }}   required="" /></td>
+    </tr>
+    <tr>
+      <td><div align="left"></div></td>
+      <td><div align="left"><span class="tp">
+        <input type="submit" name="btn" value="Send" />
+      </span></div></td>
+    </tr>
+  </table>
+</form>
+ 

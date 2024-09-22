@@ -1,0 +1,55 @@
+<form  action="/employee_add_sales" method="post" name="form1" id="form1">
+<div class="title-content text-center">
+          
+          <h3 align="center" class="title-w3l mb-sm-3 text-center">Add Sales</h3>
+  </div>
+  <table height="127" align="center">
+    <tr>
+      <td>Invoice No </td>
+      <td><input name="invoice_no" type="text" id="invoice_no"   required="" /></td>
+    </tr>
+    <tr>
+      <td>Customer Id </td>
+      <td><input name="customer_id" type="text" id="customer_id"   required="" /></td>
+    </tr>
+    <tr>
+      <td>Contact</td>
+      <td><input name="contact" type="number" id="contact"   required="" /></td>
+    </tr>
+    <tr>
+      <td>Product</td>
+      <td><input name="product" type="text" id="product"  required="" /></td>
+    </tr>
+    <tr>
+      <td>Price</td>
+      <td><input name="price" type="number" id="price"  required="" /></td>
+    </tr>
+    <tr>
+      <td>Quantity</td>
+      <td><input name="quantity" type="number" id="quantity"  required="" onChange="myFunction()" /></td>
+    </tr>
+	 <script>
+	function myFunction()
+	 {
+	 var x = document.getElementById("quantity").value;
+	 
+	 var x1 = document.getElementById("price").value;
+ 
+	 
+	 var z=x*x1;
+	 document.getElementById("total").value=z;
+	 }
+	 </script>
+    <tr>
+      <td>Total</td>
+      <td><input name="total" type="number" id="total"   required=""  /></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td><span class="tp">
+        <input type="submit" name="btn" value="Login" />
+      </span></td>
+    </tr>
+  </table>
+</form>
+ 

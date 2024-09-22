@@ -1,0 +1,23 @@
+<form  action="/admin_login" method="post" name="form1" id="form1">
+<div class="title-content text-center">
+          
+          <h3 align="center" class="title-w3l mb-sm-3 text-center">Admin Login</h3>
+  </div>
+  <table height="127" align="center">
+    <tr>
+      <td>UserName</td>
+      <td><input type="text" name="uname" placeholder="Username" required="" /></td>
+    </tr>
+    <tr>
+      <td>Password</td>
+      <td><input type="password" name="pass" placeholder="Password" required="" /></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td><span class="tp">
+        <input type="submit" name="btn" value="Login" />
+      </span><span class="style1">{{ error }}</span></td>
+    </tr>
+  </table>
+</form>
+ 

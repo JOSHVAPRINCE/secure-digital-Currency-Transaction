@@ -1,0 +1,30 @@
+<style type="text/css">
+<!--
+.style6 {color: #E14900}
+.tdsh {border-bottom: 0px solid #ccc;
+}
+-->
+</style>
+<form  action="/user_send" method="post" enctype="multipart/form-data" name="form1" id="form1">
+<div class="title-content text-center">
+          Bank Details</div>
+<table width="80%" height="106" border="0" align="center">
+  <tr>
+    <td class="tdsh"><h5 class="style6">Bank Name</h5></td>
+    <td class="tdsh"><h5 class="style6">IFSC</h5></td>
+    <td class="tdsh"><h5 class="style6">Branch</h5></td>
+    <td class="tdsh"><h5 class="style6">Address</h5></td>
+    <td class="tdsh"><h5 class="style6">State</h5></td>
+    <td class="tdsh"><h5 class="style6">Country</h5></td>
+ 
+   </tr>
+  {% for row in items %}
+  <tr> {% for d in row %}
+    <td class="tdsh">{{ d }}</td>
+    {% endfor %}
+	 
+	 </tr>
+  {% endfor %}
+</table>
+</form>
+ 

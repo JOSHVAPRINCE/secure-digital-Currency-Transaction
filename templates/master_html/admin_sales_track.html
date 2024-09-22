@@ -1,0 +1,27 @@
+<style type="text/css">
+<!--
+.style6 {color: #E14900}
+.tdsh {border-bottom: 0px solid #ccc;
+}
+-->
+</style>
+<form  action="/admin_add_manager" method="post" name="form1" id="form1">
+<div class="title-content text-center">
+          
+          <h3 align="center" class="title-w3l mb-sm-3 text-center">&nbsp; </h3>
+  </div>
+<table width="50%" height="106" border="0" align="center">
+  <tr>
+  
+    <td class="tdsh"><h5 align="left" class="style6">Item</h5></td>
+    <td class="tdsh"><h5 align="left" class="style6">Count</h5></td>
+  </tr>
+  {% for row in items %}
+  <tr> {% for d in row %}
+    <td class="tdsh"><div align="left">{{ d }}</div></td>
+    {% endfor %}  </tr>
+
+  {% endfor %}
+</table>
+</form>
+ 

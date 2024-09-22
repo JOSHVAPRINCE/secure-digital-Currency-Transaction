@@ -1,0 +1,26 @@
+<form action="/user_transaction" method="post" enctype="multipart/form-data" name="form1">
+  
+  <p align="center">TRANSACTION RECEIVED </p>
+  <table width="80%" height="106" border="0" align="center">
+    <tr>
+      <td class="tdsh"><h5 class="style6">Bank</h5></td>
+      <td class="tdsh"><h5 class="style6">Amount</h5></td>
+      <td class="tdsh"><h5 class="style6">Date</h5></td>
+      <td class="tdsh"><h5 class="style6">Process</h5></td>
+      <td class="tdsh"><h5 class="style6">Receiver</h5></td>
+    
+    </tr>
+    {% for row in items %}
+  <tr>  
+    <td class="tdsh">{{ row[1] }}</td>
+    <td class="tdsh">{{ row[2] }}</td>
+    <td class="tdsh">{{ row[5] }}</td>
+    <td class="tdsh">{{ row[6] }}</td>
+    <td class="tdsh"><a href="/user_received_1/{{ row[8] }}">Accept</a></td>
+    </tr>
+    {% endfor %}
+  </table>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+</form>

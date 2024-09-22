@@ -1,0 +1,36 @@
+<style type="text/css">
+<!--
+.style6 {color: #E14900}
+.tdsh {border-bottom: 0px solid #ccc;
+}
+-->
+</style>
+<form  action="/user_send" method="post" enctype="multipart/form-data" name="form1" id="form1">
+<div class="title-content text-center">
+          
+          <h3 align="center" class="title-w3l mb-sm-3 text-center">User Details</h3>
+  </div>
+<table width="80%" height="106" border="0" align="center">
+  <tr>
+    <td class="tdsh"><h5 class="style6">Id</h5></td>
+    <td class="tdsh"><h5 class="style6">Name</h5></td>
+    <td class="tdsh"><h5 class="style6">Contact</h5></td>
+    <td class="tdsh"><h5 class="style6">Email</h5></td>
+    <td class="tdsh"><h5 class="style6">Address</h5></td>
+    <td class="tdsh"><h5 class="style6">Aadhar</h5></td>
+    <td class="tdsh"><h5 class="style6">PAN</h5></td>
+    <td class="tdsh"><h5 class="style6">City</h5></td>
+    <td class="tdsh"><h5 class="style6">Pincode</h5></td>
+    <td class="tdsh"><h5 class="style6">State</h5></td>
+ 
+   </tr>
+  {% for row in items %}
+  <tr> {% for d in row %}
+    <td class="tdsh">{{ d }}</td>
+    {% endfor %}
+	 
+	 </tr>
+  {% endfor %}
+</table>
+</form>
+ 
